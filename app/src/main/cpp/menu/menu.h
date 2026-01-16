@@ -180,7 +180,7 @@ void menu_icon(ImGuiIO &io, ImDrawList *drawList) {
 void menu_draw(ImGuiIO &io, ImGuiStyle &style) {
     ImDrawList *drawList = ImGui::GetForegroundDrawList();
     ImDraw::DrawRect(drawList, true, ImVec2(io.DisplaySize.x / 2.0f - 55.0f * scaleFactor, io.DisplaySize.y - 10.0f * scaleFactor), ImVec2(io.DisplaySize.x / 2.0f + 55.0f * scaleFactor, io.DisplaySize.y + 10.0f * scaleFactor), ImColor(0.0f, 0.0f, 0.0f, 1.0f), 20.0f * scaleFactor);
-    ImDraw::DrawText(drawList, nullptr, 8.0f * scaleFactor, ImVec2(io.DisplaySize.x / 2.0f, io.DisplaySize.y - 5.0f * scaleFactor), ImColor(1.0f, 1.0f, 1.0f, 1.0f), "Powered By Zygisk");
+    ImDraw::DrawText(drawList, nullptr, 8.0f * scaleFactor, ImVec2(io.DisplaySize.x / 2.0f, io.DisplaySize.y - 5.0f * scaleFactor), ImColor(1.0f, 1.0f, 1.0f, 1.0f), "Modded By Kinocrp");
     if (menu_show) {
         static bool isDragging = false;
         static bool dragLocked = false;

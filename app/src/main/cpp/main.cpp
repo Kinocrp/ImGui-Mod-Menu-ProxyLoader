@@ -29,9 +29,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
     std::thread(hack_start).detach();
 
     auto handle = dlopen("libmain_real.so", RTLD_LAZY);
-    if (!handle) {
-        return JNI_VERSION_1_6;
-    }
+    if (!handle) return JNI_VERSION_1_6;
 
     auto o_JNI_OnLoad = (jint(*)(JavaVM*, void*))dlsym(handle, "JNI_OnLoad");
     if (o_JNI_OnLoad) return o_JNI_OnLoad(vm, reserved);
